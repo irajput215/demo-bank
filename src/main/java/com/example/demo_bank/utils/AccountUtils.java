@@ -19,6 +19,8 @@ public class AccountUtils {
     public static final String ACCOUNT_DEBITED_NOT_SUCCESS = "007";
     public static final String ACCOUNT_DEBITED_NOT_SUCCESS_MESSAGE = "account balance too low!";
 
+    public static final String TRANSFER_SUCCESSFUL_CODE = "008";
+    public static final String TRANSFER_SUCCESSFUL_MESSAGE = "Transfer Successful";
 
 
 
