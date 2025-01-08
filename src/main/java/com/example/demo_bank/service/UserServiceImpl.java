@@ -252,6 +252,7 @@ public class UserServiceImpl implements UserService{
                 .transactionType("transfer")
                 .accountNumber(destinationAccountUser.getAccountNumber())
                 .amount(request.getAmount())
+                .tag(request.getTag())
                 .status(sourceAccountUser.getAccountNumber())
                 .build();
 

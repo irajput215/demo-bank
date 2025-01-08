@@ -16,5 +16,6 @@ public class TransactionDto {
     private String transactionType;
     private BigDecimal amount;
     private String accountNumber;
+    private String tag;
     private String status;
 }

@@ -25,19 +25,23 @@ public class TransactionServiceImpl implements TransactionService {
                     .transactionType(transactionDto.getTransactionType())
                     .accountNumber(transactionDto.getAccountNumber())
                     .amount(transactionDto.getAmount())
+                    .tag(transactionDto.getTag())
                     .status(transactionDto.getStatus())
                     .build();
 
             transactionRepository.save(transaction);
         }
-        Transaction transaction = Transaction.builder()
-                .transactionType(transactionDto.getTransactionType())
-                .accountNumber(transactionDto.getAccountNumber())
-                .amount(transactionDto.getAmount())
-                .status("SUCCESS")
-                .build();
+        else {
+            Transaction transaction = Transaction.builder()
+                    .transactionType(transactionDto.getTransactionType())
+                    .accountNumber(transactionDto.getAccountNumber())
+                    .amount(transactionDto.getAmount())
+                    .tag(transactionDto.getTag())
+                    .status("SUCCESS")
+                    .build();
 
-        transactionRepository.save(transaction);
+            transactionRepository.save(transaction);
+        }
         System.out.println("Transaction saved successfully");
     }
 }
